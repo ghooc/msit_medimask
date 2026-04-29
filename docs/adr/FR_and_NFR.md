@@ -5,9 +5,10 @@
 - FR-04 (Session Persistence): Allow session recovery without persisting raw PII to disk.
 
 # Non-Functional Requirements (NFRs) and Design Influence:
-- NFR-01 Security & Confidentiality: Following Walker’s (2022) guidance that architectural patterns must address specific business and security constraints, MediMask utilizes an Edge Computing pattern.
+- NFR-01 Security & Confidentiality: MediMask utilizes an Edge Computing pattern.
 -- This ensures that the Local LLM Engine remains within the hospital's air-gapped environment, complying with Japan's 2G3M guidelines and mitigating the confidentiality risks of cloud-based LLMs.
-- NFR-02 Ethical Integrity and Consent: This requirement led to the implementation of the "Deny by Default" methodology within the Input Validation module, ensuring that no data is fetched or processed without an explicit patient "opt-in," thereby upholding ethical data autonomy.
+- NFR-02 Ethical Integrity and Consent: This requirement led to the implementation of the "Deny by Default" methodology within the Input Validation module,
+-- ensuring that no data is fetched or processed without an explicit patient "opt-in," thereby upholding ethical data autonomy.
 - NFR-03 Accountability & Reliability: The HITL UI forces a human-in-the-loop verification step.
 -- This ensures algorithmic fairness and provides a clear audit point for every anonymization decision.
 - NFR-04 Privacy-Preserving Persistence: The design adopts a "Zero-Disk-Write" policy for PII.
