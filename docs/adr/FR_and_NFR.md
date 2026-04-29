@@ -15,3 +15,4 @@
   - This requirement influenced the decision to use the Database Access Manager to store only record hashes and character offsets in the Database (SQLite), ensuring that even a physical breach of the local storage would yield no readable patient information.
 - NFR-05 Performance & Efficiency: The constraint of running high-performance LLMs on limited edge hardware influenced the creation of the Task Queue Manager.
   - By applying architectural patterns suited for scalability and performance (Walker, 2022), MediMask achieves optimal GPU utilization through the pipelining of inference jobs.
+- NFR-06 Hardware: The local LLM engine must run on a GPU with 16GB of video memory.
